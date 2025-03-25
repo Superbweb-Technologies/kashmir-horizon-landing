@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Snowflake, Sunrise, Utensils, Mountains } from 'lucide-react';
+import { Snowflake, Sunrise, Utensils, Mountain } from 'lucide-react';
 
 interface ExperienceItemProps {
   icon: React.ReactNode;
@@ -55,7 +55,7 @@ const ExperienceSection = () => {
       description: "Experience the magic of Kashmir's winter landscape with skiing and snowboarding adventures on pristine slopes."
     },
     {
-      icon: <Mountains className="w-10 h-10" />,
+      icon: <Mountain className="w-10 h-10" />,
       title: "Mountain Excursions",
       description: "Guided treks through breathtaking Himalayan trails offering panoramic views of snow-capped peaks."
     },
