@@ -24,6 +24,13 @@ const Navbar = () => {
     };
   }, []);
   
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <>
       <nav 
@@ -46,17 +53,17 @@ const Navbar = () => {
           
           <div className="hidden md:flex items-center space-x-12">
             {['Rooms', 'Experiences', 'Dining', 'About', 'Contact'].map((item, index) => (
-              <a 
+              <button 
                 key={item} 
-                href={`#${item.toLowerCase()}`}
-                className="relative text-sm text-white/90 hover:text-white transition-colors duration-300 animate-fade-in"
+                onClick={() => scrollToSection(item.toLowerCase())}
+                className="relative text-sm text-white/90 hover:text-white transition-colors duration-300 animate-fade-in group"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 <span className="relative">
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-white/70 transition-all duration-300 group-hover:w-full"></span>
                 </span>
-              </a>
+              </button>
             ))}
           </div>
           
