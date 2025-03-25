@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+
+import React from 'react';
 import { Mountain, Sunrise, Snowflake, Utensils } from 'lucide-react';
 
 const ExperienceSection = () => {
@@ -25,7 +26,7 @@ const ExperienceSection = () => {
     }
   ];
   
-  const ExperienceCard = ({ title, description, icon: Icon }: { title: string; description: string; icon: React.ComponentType }) => (
+  const ExperienceCard = ({ title, description, icon: Icon }: { title: string; description: string; icon: React.ComponentType<React.SVGProps<SVGSVGElement>> }) => (
     <div className="p-6 rounded-lg glass-morph hover:shadow-lg transition-shadow duration-300">
       <div className="mb-4">
         <Icon className="w-6 h-6 text-accent" />
